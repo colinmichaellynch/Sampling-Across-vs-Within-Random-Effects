@@ -3,27 +3,23 @@ What is the best sampling strategy when your experiment includes random effects 
 
 ## Table of Contents 
 
-* Current Draft of Manuscript
+* [Current Draft of Manuscript](https://github.com/colinmichaellynch/Sampling-Across-vs-Within-Random-Effects/blob/main/Balancing%20samples%20within%20and%20among%20groups%20in%20the%20design%20of%20experiments%20from%20a%20social%20insect%20research%20context.docx)
 
-* Literature Review Data
+* [Literature Review Data](https://github.com/colinmichaellynch/Sampling-Across-vs-Within-Random-Effects/blob/main/SocInsectSampSize.csv)
 
-* Simulation Data 
+* [Script to Running Simulations](https://github.com/colinmichaellynch/Sampling-Across-vs-Within-Random-Effects/blob/main/simulateExperiments.m)
 
-* Script to Running Simulations
-
-* Script for Analyzing Literature Review Data 
-
-* Script for Analyzing Simulation Data 
+* [Script for Analyzing Simulation Data](https://github.com/colinmichaellynch/Sampling-Across-vs-Within-Random-Effects/blob/main/finalGraphs.R) 
 
 ## Background
 
-Hello there! My name is Colin Lynch, and I am an animal behavior Ph.D. candidate at Arizona State University. I primarily leverage industrial engineering techniques to design optimal experiments for the study of emergence in complex adaptive systems, and I am looking to use these techniques to aquire a data science internship in R&D. I am specifically interested in reducing research costs by developing methods that minimize sample size while still having a rich enough dataset to perform hypothesis tests and predictive analytics. Here, I demonstrate how one can perform a two-dimensional power analysis (both across and within a random effect) for designing single-factor, two-leveled experiments, although this technique can be extended to other experimental designs as we generalize the ideas of both power as well as sample size. Tests are performed on a social insect case study, where colony ID is the random effect. See this manuscript for a full discussion of this methodology. 
+Hello there! My name is Colin Lynch, and I am an animal behavior Ph.D. candidate at Arizona State University. I primarily leverage industrial engineering techniques to design optimal experiments for the study of emergence in complex adaptive systems, and I am looking to use these techniques to aquire a data science internship in R&D. I am specifically interested in reducing research costs by developing methods that minimize sample size while still having a rich enough dataset to perform hypothesis tests and predictive analytics. Here, I demonstrate how one can perform a two-dimensional power analysis (both across and within a random effect) for designing single-factor, two-leveled experiments, although this technique can be extended to other experimental designs as we generalize the ideas of both power as well as sample size. Tests are performed on a social insect case study, where colony ID is the random effect. See this manuscript for a full discussion of this methodology. Note that the final simulation data could not be uploaded due to size constraints, but they can be provided on request. 
 
 ## Methods
 
 * The sample size of an an experiment with a single factor with two levels and it has a random effect (witherto refered to as 'Colony') is the number of individual ants sampled within a colony times the number of colonies. Sample size can be refered to as the contour line in a two dimensional plot: 
 
-fig 1
+![explainingEffort](/Images/optimizationCurves.png)
 
 * Breadth collection is a strategy where more colonies are sampled than ants within colonies. Depth collection is the opposite. 
 
@@ -39,11 +35,11 @@ fig 1
 
 * Depth collection strategies maximize power and minimize effort for crossed designs. 
 
-fig 4
+![](/Images/optimizationStep.png)
 
 * Depth collection strategies does the same for nested designs, but this is misleading as false positive rates are also higher. 
 
-Fig 2 
+![](/Images/falsePosRate.png)
 
 * Researchers should maximize balanced accuracy instead of power in nested designs, as this takes the false positive rate into account. 
 
