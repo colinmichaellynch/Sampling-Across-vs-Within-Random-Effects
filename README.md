@@ -19,7 +19,7 @@ Hello there! My name is Colin Lynch, and I am an animal behavior Ph.D. candidate
 
 * The sample size of an an experiment with a single factor with two levels and it has a random effect (witherto refered to as 'Colony') is the number of individual ants sampled within a colony times the number of colonies. Sample size can be refered to as the contour line in a two dimensional plot: 
 
-![explainingEffort](/Images/optimizationCurves.png)
+![](/Images/explainingEffort.png)
 
 * Breadth collection is a strategy where more colonies are sampled than ants within colonies. Depth collection is the opposite. 
 
