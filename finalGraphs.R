@@ -4,7 +4,6 @@ library(TTR)
 colony_replicates = colony_replicates[complete.cases(colony_replicates), ]
 colony_replicates$total_replicates = colony_replicates$Within_Colony_Rep*colony_replicates$Between_Colony_Rep
 
-
 ###See average variation estimate
 
 average_within_error = aggregate(x = colony_replicates[, 8], by = list(colony_replicates$total_replicates, colony_replicates$Strategy), mean)
@@ -14,14 +13,12 @@ names(average_within_error)[3] = "Within_Colony_Variation_Error"
 
 ggplot(data = average_within_error, aes(x = Total_Replicates, y = Within_Colony_Variation_Error, color = Strategy))+geom_line(size = 1.25) + theme_bw() + labs(x = "Total Replicates", y = "Within Colony Variation Error")+ geom_vline(xintercept = 15, linetype="dashed", color = "black", size=1.25)
 
-
 average_between_error = aggregate(x = colony_replicates[, 9], by = list(colony_replicates$total_replicates, colony_replicates$Strategy), mean)
 names(average_between_error)[1] = "Total_Replicates"
 names(average_between_error)[2] = "Strategy"
 names(average_between_error)[3] = "Between_Colony_Variation_Error"
 
 ggplot(data = average_between_error, aes(x = Total_Replicates, y = Between_Colony_Variation_Error, color = Strategy))+geom_line(size = 1.25) + theme_bw() + labs(x = "Total Replicates", y = "Between Colony Variation Error")+ geom_vline(xintercept = 15, linetype="dashed", color = "black", size=1.25)
-
 
 average_between_error$difference = average_between_error$Between_Colony_Variation_Error-average_within_error$Within_Colony_Variation_Error
 
@@ -67,7 +64,6 @@ names(average_false_pos)[3] = "False_Pos_Rate"
 
 ggplot(data = average_false_pos, aes(x = Total_Replicates, y = False_Pos_Rate/50, color = Strategy))+geom_line(size = 1.25) + theme_bw() + labs(x = "Total Replicates", y = "False Pos Rate")+ geom_vline(xintercept = 15, linetype="dashed", color = "black", size=1.25)
 
-
 average_false_neg = aggregate(x = colony_replicates[, 17]/50, by = list(colony_replicates$total_replicates, colony_replicates$Strategy), mean)
 names(average_false_neg)[1] = "Total_Replicates"
 names(average_false_neg)[2] = "Strategy"
@@ -95,14 +91,11 @@ ggplot(data = average_between_var_dev, aes(x = Total_Replicates, y = Total_Betwe
 
 ggplot(data = average_within_var_dev, aes(x = Total_Replicates, y = Total_Within_Variation_Deviation, color = Strategy))+geom_line(size = 1.25) + theme_bw() + labs(x = "Total Replicates", y = "Total Within Variation Deviation")+ geom_vline(xintercept = 15, linetype="dashed", color = "black", size=1.25)
 
-
 #plot(colony_replicates$total_replicates , colony_replicates$total_between_variation_deviation)
-
 
 t_count <- function(x) {
   length(x[x==1])
 }
-
 
 best_distribution = aggregate(x = colony_replicates[, 21], by = list(colony_replicates$total_replicates, colony_replicates$Strategy), t_count)
 names(best_distribution)[1] = "Total_Replicates"
@@ -112,7 +105,6 @@ names(best_distribution)[3] = "Best_Distribution"
 ggplot(data = best_distribution, aes(x = Total_Replicates, y = Best_Distribution)) + geom_point(size = 2) + theme_bw() + labs(x = "Total Replicates", y = "Best Distribution = T Count") + geom_vline(xintercept = 15, linetype="dashed", color = "black", size=1.25) + stat_summary(fun.data= mean_cl_normal) + geom_smooth(method='lm')
 
 ggplot(data = best_distribution, aes(x = Total_Replicates, y = Best_Distribution, color = Strategy)) + geom_line(size = 1.25) + theme_bw() + labs(x = "Total Replicates", y = "Best Distribution = T Count") + geom_vline(xintercept = 15, linetype="dashed", color = "black", size=1.25)
-
 
 best_distribution2 = aggregate(x = colony_replicates[, 22], by = list(colony_replicates$total_replicates, colony_replicates$Strategy), mean)
 names(best_distribution2)[1] = "Total_Replicates"
@@ -135,6 +127,3 @@ names(p_diff)[2] = "Strategy"
 names(p_diff)[3] = "P_Diff"
 
 ggplot(data = p_diff, aes(x = Total_Replicates, y = P_Diff, color = Strategy)) + geom_point(size = 1.25) + theme_bw() + labs(x = "Total Replicates", y = "P-Value for T Dist - P-Value for Z Dist") + geom_vline(xintercept = 15, linetype="dashed", color = "black", size=1.25) 
-
-#when is delta estimate negative? 
-
