@@ -11,7 +11,9 @@ What is the best sampling strategy when your experiment includes random effects 
 
 * Script to Running Simulations
 
-* Script for Analyzing Data 
+* Script for Analyzing Literature Review Data 
+
+* Script for Analyzing Simulation Data 
 
 ## Background
 
