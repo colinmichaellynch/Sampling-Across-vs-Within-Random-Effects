@@ -51,14 +51,6 @@ Hello there! My name is Colin Lynch, and I am an animal behavior Ph.D. candidate
 
 * In test cases, I found that this methodology can decrease effort by up to 20% while simutaneuosly increasing power/balanced accuracy by 5 - 10%. 
 
-## Contact Information
-
-| Contact Method | URL |
-| --- | --- |
-| Email | cmlynch2@asu.edu |
-| LinkedIn | https://www.linkedin.com/in/colinmichaellynch/ |
-| Fiverr | https://www.fiverr.com/colinlynch |
-
 ## Acknowledgements
 
 This work could not have been done without the support of some fantastic scientists. I would like to thank Dr. Nobuaki Mizumoto for developing this project and providing program and writing support. I would also like to thank Dr. Ted Pavlic and Dr. Doug Montgomery for guidance and commentary on the manuscript. Finally, I would like to thank Michaela Starkey for solving various math problems and for writing support. 
