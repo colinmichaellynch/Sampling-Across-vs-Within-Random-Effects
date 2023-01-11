@@ -19,7 +19,9 @@ Hello there! My name is Colin Lynch, and I am an animal behavior Ph.D. candidate
 
 * The sample size of an an experiment with a single factor with two levels and it has a random effect (witherto refered to as 'Colony') is the number of individual ants sampled within a colony times the number of colonies. Sample size can be refered to as the contour line in a two dimensional plot: 
 
-![](/Images/explainingEffort.png)
+<p align="center">
+  <img src=/Images/explainingEffort.png>
+</p>
 
 * Breadth collection is a strategy where more colonies are sampled than ants within colonies. Depth collection is the opposite. 
 
@@ -35,11 +37,15 @@ Hello there! My name is Colin Lynch, and I am an animal behavior Ph.D. candidate
 
 * Depth collection strategies maximize power and minimize effort for crossed designs. 
 
-![](/Images/optimizationStep.png)
+<p align="center">
+  <img src=/Images/optimizationStep.png>
+</p>
 
 * Depth collection strategies does the same for nested designs, but this is misleading as false positive rates are also higher. 
 
-![](/Images/falsePosRate.png)
+<p align="center">
+  <img src=/Images/falsePosRate.png>
+</p>
 
 * Researchers should maximize balanced accuracy instead of power in nested designs, as this takes the false positive rate into account. 
 
